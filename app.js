@@ -84,9 +84,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.get('/',(res,req)=>{
-    res.redirect('/listings');
-})
+
 
 app.use((req,res,next)=>{
     res.locals.success = req.flash('success');
@@ -100,7 +98,9 @@ app.use((req,res,next)=>{
 app.use('/listings',listingRouter);
 app.use('/listings/:id/reviews',reviewRouter);
 app.use('/',userRouter);
-
+app.get('/',(res,req)=>{
+    res.redirect('/listings');
+})
 app.all('*',(req,res,next)=>{
     next(new expressError(404,'Page not found'))
 })
