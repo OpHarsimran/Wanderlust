@@ -78,7 +78,7 @@
             <div class="card col-5 ms-3 mb-3">
                 <div class="card-body">
                     <h5 class="card-title"><%=reviews.author.username%></h5>
-                    <p class="starability-result card-text" data-rating="<%= reviews.rating %>"></p>
+                    <p class="starability-result card-text rate" data-rating="<%= reviews.rating %>"></p>
                     <p class="card-text"><%= reviews.comment %></p>
                     <%if(currUser && currUser._id.equals(reviews.author._id)){%>
 
