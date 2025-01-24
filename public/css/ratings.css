@@ -195,3 +195,22 @@
     -webkit-transition: background-position .7s;
     transition: background-position .7s;
   }
+
+  
+
+@media (max-width: 768px) {
+    .rating-container .starability-result {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin: 0 auto; /* Center the card on small screens */
+    }
+
+    .rating-container .starability-result {
+        font-size: 1rem; /* Even smaller font size for extra small screens */
+    }
+}
